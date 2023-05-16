@@ -1,8 +1,14 @@
 import { FC } from 'react'
 
-
-const Greet: FC = () => {
-  return <div>Hello</div>
+interface GreetProps {
+    name?: string
+}
+const Greet: FC<GreetProps> = ({name}) => {
+  return (
+    <>
+    {`Hello ${name}`}
+    </>
+  )
 }
 
 export default Greet
