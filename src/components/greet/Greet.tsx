@@ -6,7 +6,7 @@ interface GreetProps {
 const Greet: FC<GreetProps> = ({name}) => {
   return (
     <>
-    {`Hello ${name}`}
+    {`Hello ${name ? name : "Guest"}`}
     </>
   )
 }
