@@ -4,7 +4,9 @@ import { Application } from "./application";
 describe('Application component', () => {
     test('component renders correctly', () => {
         render(<Application />);
-        const nameEl = screen.getByRole('textbox');
+        const nameEl = screen.getByRole('textbox', {
+            name: "Name"
+        });
         expect(nameEl).toBeInTheDocument();
         
         const jobLocationEl = screen.getByRole("combobox");
