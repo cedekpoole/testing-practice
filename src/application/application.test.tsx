@@ -20,6 +20,9 @@ describe('Application component', () => {
         });
         expect(nameEl).toBeInTheDocument();
 
+        const nameEl2 = screen.getByLabelText("Name");
+        expect(nameEl2).toBeInTheDocument();
+
         const bioEl = screen.getByRole('textbox', {
             name: "Bio"
         });
