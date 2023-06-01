@@ -15,6 +15,9 @@ describe('Application component', () => {
         })
         expect(sectionOneTitle).toBeInTheDocument();
 
+        const paraEl = screen.getByText("Please fill in the form below");
+        expect(paraEl).toBeInTheDocument();
+
         const nameEl = screen.getByRole('textbox', {
             name: "Name"
         });
@@ -36,5 +39,8 @@ describe('Application component', () => {
 
         const submitEl = screen.getByRole("button");
         expect(submitEl).toBeInTheDocument();
+
+        const termsEl2 = screen.getByLabelText("I agree with the terms and conditions");
+        expect(termsEl2).toBeInTheDocument();
     })
 })
